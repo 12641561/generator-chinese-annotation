@@ -1,25 +1,9 @@
-# mybatis-generator-core-chinese-annotation（已删除ibatis2内容）
-## 介绍
-该项目是mybatis-generator-core 1.3.5 进行自定义注解生成的修改，
-<a target=_blank href="https://github.com/mybatis/generator/releases">mybatis-generator-core 1.3.5官方下载地址</a>，
-主要添加中文注释信息，详细修改内容如下：<br>
-1.生成model对象的注释信息<br>
-2.get/set方法的注释信息<br>
-3.类注释信息<br>
-4.增删改查条件的注释信息<br>
-5.生成的代码符合阿里规范<br>
-6.增加批量增加、修改的操作<br>
-<br>
-## 使用方式
-maven工程的打包，执行命令：clean install ，加入到本地仓库,生成“1.3.5-chinese-annotation-by-tang”包名
-<br>
 
-## 源码剖析说明
-1.剖析org.mybatis.generator.plugins.ToStringPlugin源码<br>
-2.剖析org.mybatis.generator.plugins.MapperConfigPlugin源码<br>
-3.剖析org.mybatis.generator.api.ShellRunner源码，Main入口<br>
-3.剖析org.mybatis.generator.config.xml.ConfigurationParser源码，配置解析器，用于对generatorConfig.xml配置文件的解析<br>
-4.剖析org.mybatis.generator.config.Context源码，封装<context>元素内容<br>
+## 介绍
+该项目是由mybatis-generator-core 1.3.5修改而来，主要添加中文注释信息
+## 使用方式
+打成jar包，加入到本地仓库,替换mybatis-generator-core包
+<br>
 
 ## 修改源码说明(原版本没有的功能)
 1.数据表的备注信息的添加：在FullyQualifiedTable类中添加remark字段,并在org.mybatis.generator.internal.db.DatabaseIntrospector类calculateIntrospectedTables方法,添加一段获取数据库备注的代码<br>
